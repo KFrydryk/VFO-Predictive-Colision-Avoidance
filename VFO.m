@@ -38,7 +38,7 @@ hai = ka*eai + thai_p;%q_p(1);
 if norm(qi(2:3)) > 0.5
     u = [hai; roi*sigmai*cos(eai)];
 else
-    u = [0;0];
+    u = [0;0]
 end
 
 end

@@ -1,0 +1,6 @@
+global targets targetIter
+
+targets = [pi/4, 5, 5;...
+    0, 7,7;...
+    pi/4, 10, 10]'
+targetIter = 1;
