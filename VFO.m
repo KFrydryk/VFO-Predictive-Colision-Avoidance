@@ -2,12 +2,9 @@ function [u] = VFO(in)
 %VFO Summary of this function goes here
 %   Detailed explanation goes here
 
-q = in(1:3);
+qi = in(1:3);
 q_p = in(4:6);
-target = in(7:9);
-th_p = q_p(1);
-%%change of coordinates - to next ponts coordinate system
-qi = globtonextframe(q, target)
+
 qi_p = q_p%globtonextframe(q_p, target)
 %qi_p(1) = th_p
 

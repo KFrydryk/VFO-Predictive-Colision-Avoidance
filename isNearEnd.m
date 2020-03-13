@@ -6,8 +6,8 @@ global targets targetIter
 
 if norm(pos(2:3)) < 0.5
     targetIter = targetIter+1;
-    if targetIter > 3
-        targetIter = 3
+    if targetIter > size(targets, 2)
+        targetIter = size(targets, 2);
     end
 end
 target = targets(:,targetIter);
