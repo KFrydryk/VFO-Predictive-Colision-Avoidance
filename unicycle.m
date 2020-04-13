@@ -1,5 +1,5 @@
 function [out] = unicycle(in)
-%kinematics of aan unicycle
+%kinematics of an unicycle
 
 u = in(1:2);
 q = in(3:5);
