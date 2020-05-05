@@ -1,11 +1,13 @@
 function [u] = VFO(in)
+global obstacles
 %VFO Summary of this function goes here
 %   Detailed explanation goes here
 
 qi = in(1:3);
 q_p = in(4:6);
+forceField = in(7);
 
-qi_p = q_p%globtonextframe(q_p, target)
+qi_p = q_p;%globtonextframe(q_p, target)
 %qi_p(1) = th_p
 
 kp = 0.5;
@@ -31,11 +33,11 @@ hdi_p = -kp*(qi_p(2:3))+v_p;
 thai_p = (hdi_p(2)*hdi(1)-hdi_p(1)*hdi(2))/(hdi(1)^2+hdi(2)^2);
 
 
-hai = ka*eai + thai_p;%q_p(1);
+hai = ka*eai + thai_p + forceField;%q_p(1);
 if norm(qi(2:3)) > 0.5
     u = [hai; roi*sigmai*cos(eai)];
 else
-    u = [0;0]
+    u = [0;0];
 end
 
 end
