@@ -9,7 +9,7 @@ for index = 1:num
     randx = (max_size_x - min_size_x) * rand() + min_size_x;
     randy = (max_size_y - min_size_y) * rand() + min_size_y;
     rad = max_radius*rand();
-    o{index} = [randx, randy, rad];
+    o{index} = [index, randx, randy, rad];
 end
 out = o;
 end
